@@ -1,13 +1,15 @@
 import { useDispatch } from "react-redux"
 
-import { removeItemFromCart } from "./Redux/reducer/cart"
+import { removeItemFromCart, calculateTotalPrice } from "./Redux/reducer/cart"
  import (useDispatch)
+
 
  function CartItem({suuq}){
     const dispacth = useDispatch()
 
     const Handleremove =()=>{
         dispacth(removeItemFromCart(suuq))
+        dispacth(calculateTotalPrice())
     }
 
 
